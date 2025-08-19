@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gordita</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}" />
+</head>
+<body>
+    <img class="osito-img" src="/static/osito.png" alt="osito">
+    <h1>Bienvenido a la pagina de mi gordita</h1>
+    <form method="post" action="/nombre">
+        <input placeholder="Ingresa un nombre..." type="text" id="nombre" name="nombre">
+        <button class="btn-sub" type="submit">Enviar</button>
+    </form>
+    <h2>Nombres</h2>
+    <ul>
+        {% for nombre in nombres %}
+        <li>{{ nombre.nombre }} <img src="/static/bebe.png" class="icon-img" alt="icon" width="40" height="35"></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
