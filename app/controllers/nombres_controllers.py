@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Form
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from app.base.database import get_db
-#from app.schemas.nombre_schema import NombreSchema
 from app.base.models.nombre_model import NombreModel
 from app.repositories.repository import get_nombres, create_nombre, delete_nombre
 from fastapi.templating import Jinja2Templates
