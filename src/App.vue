@@ -41,7 +41,6 @@ body {
   background: linear-gradient(to bottom, #feb9ac, #feca94);
   text-align: center;
   padding: 10px;
-  height: 100vh;
 }
 .osito-img{
   background: transparent;
