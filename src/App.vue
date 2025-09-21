@@ -18,7 +18,8 @@ async function agregarNombre(){
 
 async function cargarNombres(){
   const querySnap = await getDocs(collection(db, "nombres"));
-  nombres.value = querySnap.docs.map(doc => doc.data().nombre)
+  const nombres_ordenados = querySnap.docs.map(doc => doc.data().nombre) 
+  nombres.value = nombres_ordenados.sort()
 }
 
 cargarNombres()
